@@ -19,9 +19,6 @@ pipeline {
             }
         }
         stage('SonarAnalysis') {
-            environment {
-                SONAR_TOKEN = credentials('sonarqube-credentials')
-            }
             steps {
                 bat '''
                 set PATH=%PYTHON_PATH%;%PATH%
