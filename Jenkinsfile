@@ -25,10 +25,11 @@ pipeline {
             steps {
                 bat '''
                 set PATH=%PYTHON_PATH%;%PATH%
-                sonar-scanner -Dsonar.projectKey=pipeline2 ^
+                sonar-scanner ^
+                -Dsonar.projectKey=pipeline2 ^
                 -Dsonar.sources=. ^
                 -Dsonar.host.url=http://localhost:9000 ^
-                -Dsonar.token=sqp_ef3d2517182618965f03a3afb0fd8da6cb506099
+                -Dsonar.token=sqa_e0d66921a5e37d4859d748d025d4fe0c23afcbc7
                 '''
             }
         }
